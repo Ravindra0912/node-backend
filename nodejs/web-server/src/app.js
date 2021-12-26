@@ -67,6 +67,11 @@ app.get('/about',(req,res)=>{
 //     res.send('<h1>about</h1>');
 // })
 
+app.get('/favico.ico', (req, res) => {
+    res.sendStatus(404);
+});
+
+
 app.get('/weather', (req,res)=>{
     if(!req.query.address){
         return res.send({
